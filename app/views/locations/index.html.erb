@@ -1,0 +1,21 @@
+<h2>Locations</h2>
+<%= link_to "Create Location", new_location_path %>
+<%= link_to "Go back to home", maps_path %>
+<hr>
+
+  <table width="100%">
+    <tr>
+      <th>Name</th>
+      <th>X-coordinate</th>
+      <th>Y-coordinate</th>
+      <th>Options</th>
+    </tr>
+    <tr>
+      <% @locations.each do |location| %>
+      <td align="center"><%= location.name %></td>
+      <td align="center"> <%= location.xcoor%></td>
+      <td align="center"> <%= location.ycoor %></td>
+      <td align="center"><%= link_to "Destroy", location_path(location.id), :method => :delete, :data => { :confirm => "Are you sure you?" } %> </td>
+    </tr>
+      <% end %>
+  </table>

@@ -1,0 +1,23 @@
+<h2>Creatures</h2>
+<%= link_to "Create Creature", new_creature_path %>
+<%= link_to "Go back to home", maps_path %>
+<hr>
+
+  <table width="100%">
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Options</th>
+    </tr>
+    <tr>
+        <% Creature::CREATURETYPES.each do |creature_type| %>
+          <% Creature.all.where(:creature_type => creature_type).each do |creature| %>
+        <td align="center"><%= creature.name %></td>
+        <td align="center"> <%= creature.creature_type %></td>
+         <td align="center"> </td>
+        <td align="center"> </td>
+        <td align="center"><%= link_to "Destroy", creature_path(creature.id), :method => :delete, :data => { :confirm => "Are you sure you?" } %> 
+    </tr>
+        <% end %>
+      <% end %>
+  </table>
