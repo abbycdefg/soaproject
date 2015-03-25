@@ -14,8 +14,6 @@
           <% Creature.all.where(:creature_type => creature_type).each do |creature| %>
         <td align="center"><%= creature.name %></td>
         <td align="center"> <%= creature.creature_type %></td>
-         <td align="center"> </td>
-        <td align="center"> </td>
         <td align="center"><%= link_to "Destroy", creature_path(creature.id), :method => :delete, :data => { :confirm => "Are you sure you?" } %> 
     </tr>
         <% end %>

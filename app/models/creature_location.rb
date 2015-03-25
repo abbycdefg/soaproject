@@ -1,2 +1,4 @@
 class CreatureLocation < ActiveRecord::Base
+	belongs_to :location
+	belongs_to :creature
 end
