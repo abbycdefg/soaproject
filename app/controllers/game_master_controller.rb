@@ -1,4 +1,7 @@
 class GameMasterController < ApplicationController
+	def index
+	end
+
 	def trade
 		@user = User.find(params[:id])
 	end
@@ -9,10 +12,10 @@ class GameMasterController < ApplicationController
 	end
 
 	def catch
-		#@user = User.find(params[:id])
-		@creaturesko = UserCreature.find(params[:id])
 
-		render json: @creaturesko
-		
+
+		render :template => "game_master/catch"
+
+		#render json: @creaturesko
 	end
 end

@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :creatures
   resources :locations
   resources :maps
+  resources :user_creatures
+
+
+  get 'game_master/catch' => 'game_master#catch', as: :game_master_catch 
 end
