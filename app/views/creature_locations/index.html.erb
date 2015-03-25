@@ -13,7 +13,7 @@
     <tr>
       <% @creature_locations.each do |creature_location| %>
       <td align="center"><%= creature_location.creature.name %></td>
-      <td align="center"> <%= creature_location.location.xcoor%></td>
+      <td align="center"> <%= creature_location.location.xcoor %></td>
       <td align="center"> <%= creature_location.location.ycoor %></td>
       <td align="center"><%= link_to "Destroy", creature_location_path(creature_location.id), :method => :delete, :data => { :confirm => "Are you sure you?" } %> </td>
     </tr>

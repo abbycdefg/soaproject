@@ -13,7 +13,7 @@ ito ang ating guide para makita yung movement ng user table dapat to na lalabas 
     <tr>
       <% @user_locations.each do |user_location| %>
       <td align="center"><%= user_location.user.email %></td>
-      <td align="center"> <%= user_location.location.xcoor%></td>
+      <td align="center"> <%= user_location.location.xcoor %></td>
       <td align="center"> <%= user_location.location.ycoor %></td>
       </tr>
       <% end %>

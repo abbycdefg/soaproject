@@ -1,6 +1,7 @@
 <h1>wer u wanna go</h1>
 
 <%= simple_form_for(@user_location) do |f| %>
+  <%= f.association :user %>
   <%= f.association :location %>
   <%= f.input :name %>
     <hr>
