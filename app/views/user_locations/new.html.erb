@@ -1,0 +1,10 @@
+<h1>wer u wanna go</h1>
+
+<%= simple_form_for(@user_location) do |f| %>
+  <%= f.association :location %>
+  <%= f.input :name %>
+    <hr>
+  <%= f.submit "move ya loser" %>
+<% end %>
+
+

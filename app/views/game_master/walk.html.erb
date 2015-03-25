@@ -1,0 +1,11 @@
+<h1>Choose a location</h1>
+
+<%= simple_form_for(@movement) do |f| %>
+
+  <%= f.association :location %>
+  <%= f.input :name %>
+    <hr>
+  <%= f.submit "Create Location" %>
+<% end %>
+
+<%= link_to "Back to locations", locations_path %>
